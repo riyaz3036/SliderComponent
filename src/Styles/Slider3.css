@@ -1,0 +1,160 @@
+.slider__3{
+    max-width: 30rem;
+    margin: 8rem auto;
+    position: relative;
+    display:flex;
+  }
+ 
+  
+.dot_section{
+width: 30rem;
+height: 10px;
+ 
+display: flex;
+align-items: center;
+position: absolute;
+top: 2px;
+}
+
+
+.dot_green{
+    background-color: #47b647;
+    height: 0.3rem;
+    width: 0.3rem;
+    border-radius: 50%;
+    margin-left: 2.68rem;    
+}
+
+.dot_white{
+    background-color: #fff;
+    height: 0.3rem;
+    width: 0.3rem;
+    border-radius: 50%;
+    margin-left: 2.68rem;     
+}
+    
+
+  /* Styling the slider */
+  .slider__3 .slider3{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    outline: none;
+    background: #F2F3F5;
+    border-radius: 5px;
+  }
+  
+  /* Removing the thumb */
+  
+  .slider__3 .slider3::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    cursor:pointer;
+    z-index: 3;
+    position: relative;
+   }
+  
+  
+  
+  /* Adding a new thumb */
+  
+  .slider__3 .slider__thumb3,.slider__3 .slider__thumb3_foc,.slider__3 .slider__thumb3_hov{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 6px solid #fff; 
+    background: #47b647;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor:pointer;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    box-shadow: 0 0 2px 0 #090909; 
+  
+  }
+
+  .slider__3:hover .slider__thumb3{
+    border: 6px solid #fff; 
+    outline: none;
+  }
+  
+  .slider__3:hover .slider__thumb3_hov{
+    border: 6px solid #F2F3F5;
+  }
+  
+  
+  .slider__3:hover .slider__thumb3_foc{
+    outline: 2px solid #47b647; 
+  }
+  
+  
+  
+  
+  
+  
+  /* Styling the tooltip */
+  .slider__3 .tooltip3{
+    position: absolute;
+    width: 2.6rem;
+    height: 2.2rem;
+    top:-2.3rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #090909;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 6px;
+    visibility: hidden;
+  }
+  
+  .slider__3 .tooltip3::before {
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #0f0f0f;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    visibility: hidden;
+  
+  }
+  
+  .slider__3:hover .tooltip3{
+    visibility: visible;
+  }
+  .slider__3:hover .tooltip3::before{
+    visibility: visible;
+  }
+  
+  
+  
+  /* Making the duplicate thumb responsive */
+  
+  .slider__3 .progress3{
+    width: 20%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(#47b647,#47b647);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    pointer-events: none;
+  }
+  
+  @media screen and (max-width: 700px){
+    .slider__3{
+      width: 100%;
+    }
+  }
+
+  
+  
+ 

@@ -1,0 +1,125 @@
+.slider__{
+  max-width: 30rem;
+  margin: 8rem auto;
+  position: relative;
+  display:flex;
+}
+
+/* Styling the slider */
+.slider__ .slider{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  outline: none;
+  background: #F2F3F5;
+  border-radius: 5px;
+}
+
+/* Removing the thumb */
+
+.slider__ .slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  cursor:pointer;
+  z-index: 3;
+  position: relative;
+ }
+
+
+
+/* Adding a new thumb */
+
+.slider__ .slider__thumb,.slider__ .slider__thumb_foc,.slider__ .slider__thumb_hov{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 6px solid #fff; 
+  background: #47b647;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor:pointer;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  box-shadow: 0 0 2px 0 #090909; 
+  }
+
+.slider__:hover .slider__thumb_hov{
+  border: 6px solid #F2F3F5;
+   
+}
+
+
+.slider__:hover .slider__thumb_foc{
+  outline: 2px solid #47b647;  
+}
+
+
+
+
+
+
+/* Styling the tooltip */
+.slider__ .tooltip{
+  position: absolute;
+  width: 2.6rem;
+  height: 2.2rem;
+  top:-2.3rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #090909;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 6px;
+  visibility: hidden;
+}
+
+.slider__ .tooltip::before {
+  content:'';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #0f0f0f;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  visibility: hidden;
+
+}
+
+.slider__:hover .tooltip{
+  visibility: visible;
+}
+.slider__:hover .tooltip::before{
+  visibility: visible;
+}
+
+
+
+/* Making the duplicate thumb responsive */
+
+.slider__ .progress{
+  width: 20%;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(#47b647,#47b647);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 700px){
+  .slider__{
+    width: 100%;
+  }
+}
+
+
+  
