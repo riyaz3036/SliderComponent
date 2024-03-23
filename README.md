@@ -24,6 +24,8 @@
 
 (toggle through all the options to test the component)
 
+NOTE: There are some observed glitches using storybook. If the slider is stuck click on the empty screen and try dragging again (thank you!)
+
 ------------------------------------------------------------------
 
 THANK YOU!!!!!!
